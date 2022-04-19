@@ -14,12 +14,13 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="config.js"></script>
     <script src="login.js"></script>
 
     <h1><!--หัว-->
         <p align="center">Sign in to continue</p>
     </h1>
-    <div>
+    <div class="container"> 
         <form><!--กรอกข้อมูล-->
             <fieldset style="width: fit-content;">
                 <b>Username :</b><br>
@@ -27,7 +28,7 @@
                 <b>Password :</b><br>
                 <input type="text" name="password"><br><br>
                 <!--ปุ่มล็อคอิน-->
-                <input type="submit" value="Login">
+                <button type="text" id="ButID_Login">login</button>
                 <p>Lost password?</p><br><br>
             </fieldset>
         </form>    

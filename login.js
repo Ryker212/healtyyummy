@@ -1,16 +1,8 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyA8EzeDcC1eWSYeoGZRyXpupi5ToZhn1Ew",
-    authDomain: "g1-zes.firebaseapp.com",
-    projectId: "g1-zes",
-    storageBucket: "g1-zes.appspot.com",
-    messagingSenderId: "166111315060",
-    appId: "1:166111315060:web:3e53d459e6a016f0e3fd21",
-    measurementId: "G-F1SCBC03LR"
-    };
-    firebase.initializeApp(firebaseConfig);
-
     const auth = firebase.auth();
     var user = auth.currentUser;
+
+    let Login_Button = document.getElementById("ButID_Login");
+    Login_Button.addEventListener("click",Login);
 
     function Login(){
         var username = document.getElementById("usernameField").value;
