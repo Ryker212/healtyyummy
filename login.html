@@ -9,37 +9,13 @@
   <link rel="stylesheet" href="login.css">
 </head>
 
-<body>
+<body style="background-color: rgb(128, 232, 192);">
     <!--Firestore-->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyA8EzeDcC1eWSYeoGZRyXpupi5ToZhn1Ew",
-            authDomain: "g1-zes.firebaseapp.com",
-            projectId: "g1-zes",
-            storageBucket: "g1-zes.appspot.com",
-            messagingSenderId: "166111315060",
-            appId: "1:166111315060:web:3e53d459e6a016f0e3fd21",
-            measurementId: "G-F1SCBC03LR"
-        };
-        firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
+    <script src="login.js"></script>
 
-        auth.signInWithEmailAndPassword(username, password)
-        .then ((result) => {
-
-            console.log(result.user.username)
-
-        })
-        .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            console.log("error " + errorCode + " : " + errorMessage);
-            });
-
-    </script>
     <h1><!--หัว-->
         <p align="center">Sign in to continue</p>
     </h1>
@@ -70,26 +46,4 @@
         </b></u>
     </p>
 </article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>
