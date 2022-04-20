@@ -1,24 +1,24 @@
-    const auth = firebase.auth();
-    var user = auth.currentUser;
+const auth = firebase.auth();
+var user = auth.currentUser;
 
-    let Login_Button = document.getElementById("ButID_Login");
-    Login_Button.addEventListener("click",Login);
+let Login_Button = document.getElementById("ButID_Login");
+Login_Button.addEventListener("click",Login);
 
-    function Login(){
-        var username = document.getElementById("usernameField").value;
-        var password = document.getElementById("passField").value;
+function Login(){
+    var username = document.getElementById("usernameField").value;
+    var password = document.getElementById("passField").value;
 
-        auth.signInWithUsernameAndPassword(username, password)
-            .then ((userCredential) => {
-                user = userCredential.user;
+    auth.signInWithUsernameAndPassword(username, password)
+    .then ((userCredential) => {
+            user = userCredential.user;
 
-                console.log("Successfully Sign In");
-                console.log(user.uid);
+            console.log("Successfully Sign In");
+            console.log(user.uid);
 
-            })
-            .catch((error) => {
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                console.log("error " + errorCode + " : " + errorMessage);
-            });
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log("error " + errorCode + " : " + errorMessage);
+        });
     }
