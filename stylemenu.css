@@ -10,6 +10,7 @@ h1 {
         
         
 }
+
 .box input{
         /*ไว้ตกแต่งกล่องรับความ*/
         width: 1000px;
@@ -35,17 +36,18 @@ button:hover{
 
 .menu{
         font-size: 25px;
-        font-family:  'Bell MT';
+        font-family:  'Century Gothic';
         color: rgb(0, 0, 0);
         background-color: #c9e0e7;
         border-radius:200px;
         width: 100%;
         text-indent:150px;
 }
-.img{
-        width: 100%;
+.boximg{
+        
+        width: 30%;
         background-color: white;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         text-align: center;
-        border-radius:200px;
+        border-radius: 2000px;
 }
