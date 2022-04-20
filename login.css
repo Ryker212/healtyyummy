@@ -8,6 +8,9 @@ form{
     text-align: center;
     color: rgb(0, 0, 0);
     font-size: 20px;
+    padding : 10px;
+    border-radius: 20px;
+    background-color: rgb(235, 176, 212);
 }
 article{
     text-align: center;
