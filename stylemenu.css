@@ -1,0 +1,51 @@
+header{
+    color: rgb(81, 145, 115);
+    font-size: 45px;
+    font-family:  'FC Palette Color';
+    }
+h1 {
+
+        font-size: 20px;
+        line-height : 19px;
+        
+        
+}
+.box input{
+        /*ไว้ตกแต่งกล่องรับความ*/
+        width: 1000px;
+        height: 25px;
+        border-radius:10px;
+        background-color:rgb(192, 226, 212);
+        font-size:20px;
+        font-family:  'Arial';        
+}
+button{
+        color: #fff;
+        overflow: hidden;
+        border-radius: 1000px;
+        width: 3%;height: 30px;
+        box-shadow: 0px -0px 0px 0px rgba(143,64,248,0.5),
+        0px 0px 0px 0px rgba(39, 200, 255,0.5);      
+}
+button:hover{
+        transform: translate(0, -6px);
+        box-shadow: 10px -15px 25px 0px rgba(143,64,248,0.5),
+        -10px 10px 25px 0px rgba(39, 200, 255,0.5);  
+}
+
+.menu{
+        font-size: 25px;
+        font-family:  'Bell MT';
+        color: rgb(0, 0, 0);
+        background-color: #c9e0e7;
+        border-radius:200px;
+        width: 100%;
+        text-indent:150px;
+}
+.img{
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+        border-radius:200px;
+}
