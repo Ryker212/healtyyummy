@@ -1,47 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Healthy Yummy</title>
-  <link rel="stylesheet" href="login.css">
-</head>
+        <link rel="stylesheet" href="login.css">
 
-<body style="background-color: rgb(128, 232, 192);">
-    <!--Firestore-->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="config.js"></script>
-    <script src="loginAuth.js"></script>
-    <script src="loginCloud.js"></script>
+        <title>Welcome to Healthy Yummy</title>
+    </head>
+    <body>
+        <!--Login-->
+        <div class="container">
+            <div class="forms">
+                <div class="form login">
+                    <span class="title">Sign in to continue</span>
 
-    <h1><!--หัว-->
-        <p align="center">Sign in to continue</p>
-    </h1>
-    <div class="container"> 
-        <form><!--กรอกข้อมูล-->
-                <b>Username :</b><br>
-                <input id="UsernameBox" type="text"><br>
-                <b>Password :</b><br>
-                <input id="PasswordBox" type="text"><br><br>
-                <!--ปุ่มล็อคอิน-->
-                <button onclick="login()">Login</button><br>
-                <span class="psw"><a href="#">Lost password?</a></span>
-        </form>    
-    </div>
-</body>
-<article><!--linkไปregister-->
-    <br><hr color="black" width="400px">
-    <p>Don't have any account? 
-       <b><u>
-            <a href="regis.html"
-            title="REGISTER"
-            target="_blank"> REGISTER
-            </a>
-        </b></u>
-    </p>
-</article>
+                    <form action="#">
+                        <b>username:</b>
+                        <div class="input-field">
+                            <input type="text" placeholder="Enter your username" required>
+                        </div>
+
+                        <b>password:</b>
+                        <div class="input-field">
+                            <input type="password" class="password" placeholder="Enter your password" required>
+                        </div>
+
+                        <div class="input-field button">
+                            <input type="button" value="Login">
+                        </div>
+                    </form>
+
+                    <div class="login-register">
+                        <span class="text">Don't have an account?
+                        <a href="#" class="text register-link">Register</a></span>
+                    </div>
+                </div>
+
+        <!--Register-->
+        <div class="form register>
+            <span class="title">Register</span>
+
+            <form action="#">
+                <b>username:</b>
+                <div class="input-field">
+                    <input type="text" placeholder="Enter your username" required>
+                </div>
+
+                <b>email:</b>
+                <div class="input-field">
+                    <input type="text" placeholder="Enter your email" required>
+                </div>
+
+                <b>password:</b>
+                <div class="input-field">
+                    <input type="password" class="password" placeholder="Create a password" required>
+                </div>
+                
+                <b>repeat password:</b>
+                <div class="input-field">
+                    <input type="password" class="password" placeholder="Confirm a password" required>
+                </div>
+
+                <div class="input-field button">
+                    <input type="button" value="Register">
+                </div>
+
+                <div class="login-register">
+                    <span class="text">Have already an account?
+                    <a href="#" class="text login-link">Login Here</a></span>
+                </div>
+            </form>
+        </div>
+
+        <script src="login.js"></script>
+
+    </body>
 </html>
