@@ -15,7 +15,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="config.js"></script>
-    <script src="login.js"></script>
+    <script src="loginAuth.js"></script>
+    <script src="loginCloud.js"></script>
 
     <h1><!--หัว-->
         <p align="center">Sign in to continue</p>
@@ -27,7 +28,7 @@
                 <b>Password :</b><br>
                 <input id="PasswordBox" type="text"><br><br>
                 <!--ปุ่มล็อคอิน-->
-                <button type="submit">Login</button><br>
+                <button onclick="login()">Login</button><br>
                 <span class="psw"><a href="#">Lost password?</a></span>
         </form>    
     </div>
