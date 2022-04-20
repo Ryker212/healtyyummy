@@ -8,17 +8,17 @@
         var username = document.getElementById("usernameField").value;
         var password = document.getElementById("passField").value;
 
-    auth.signInWithEmailAndPassword(username, password)
-    .then ((result) => {
-        user = result.user;
+        auth.signInWithUsernameAndPassword(username, password)
+            .then ((userCredential) => {
+                user = userCredential.user;
 
-        console.log("Successfully Sign In");
-        console.log(result.user);
+                console.log("Successfully Sign In");
+                console.log(user.uid);
 
-        })
-    .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log("error " + errorCode + " : " + errorMessage);
-        });
+            })
+            .catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log("error " + errorCode + " : " + errorMessage);
+            });
     }
