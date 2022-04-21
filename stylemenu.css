@@ -20,9 +20,38 @@ h1 {
         font-size:20px;
         font-family:  'Arial';        
 }
+form.example input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 80%;
+        background: #f1f1f1;
+      }
+form.example button {
+        float: left;
+        width: 20%;
+        padding: 10px;
+        background: #2196F3;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        cursor: pointer;
+      }
+      
+      form.example button:hover {
+        background: #0b7dda;
+      }
+      
+      form.example::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
 button{
         color: #fff;
-        overflow: hidden;
+        /* overflow: hidden; */
         border-radius: 1000px;
         width: 3%;height: 30px;
         box-shadow: 0px -0px 0px 0px rgba(143,64,248,0.5),
@@ -39,15 +68,17 @@ button:hover{
         font-family:  'Century Gothic';
         color: rgb(0, 0, 0);
         background-color: #c9e0e7;
-        border-radius:200px;
+        border-radius:150px;
         width: 100%;
         text-indent:150px;
 }
 .boximg{
-        
         width: 30%;
         background-color: white;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         text-align: center;
         border-radius: 2000px;
+}
+.menuradius{
+        border-radius:20px;
 }
