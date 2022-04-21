@@ -6,10 +6,10 @@ let Login_Button = document.getElementById("Logbtn");
 Login_Button.addEventListener("click",Login);
 
 function Login(){
-    var username = document.getElementById("usernameField").value;
+    var email = document.getElementById("emailField").value;
     var password = document.getElementById("passwordField").value;
 
-    auth.signInWithUsernameAndPassword(username, password)
+    auth.signInWithEmailAndPassword(email, password)
         .then ((userCredential) => {
                 user = userCredential.user;
                 console.log("Successfully Sign In");

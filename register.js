@@ -6,18 +6,18 @@ let Register_button = document.getElementById("Regbtn");
 Register_button.addEventListener("click",Register);
 
 function Register(){
-    var username = document.getElementById("usernameField").value;
+    var email = document.getElementById("emailField").value;
     var password = document.getElementById("passwordField").value;
 
-    auth.createUserWithUsernameAndPassword(username, password)
+    auth.createUserWithEmailAndPassword(email, password)
         .then ((userCredential) => {
                 user = userCredential.user;
-                console.log("Successfully Registered with ("+ user.username +")");
+                console.log("Successfully Registered with ("+ user.email +")");
                 console.log("Successfully Register");
                 console.log("UID : "+ user.uid);
 
-                firestore.collection("User").doc(usernameField.value).collection("Infomation").doc("userLogin").set({
-                    Username : usernameField.value,
+                firestore.collection("User").doc(emailField.value).collection("Infomation").doc("userLogin").set({
+                    Email : emailField.value,
                     Password : passwordField.value,
                     UID      : user.uid
                 })
