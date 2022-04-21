@@ -2,35 +2,29 @@
 const auth = firebase.auth();
 var user = auth.currentUser;
 
+let Register_button = document.getElementById("Regbtn");
+Register_button.addEventListener("click",Register);
+
 function Register(){
     var username = document.getElementById("usernameField").value;
-    var password = document.getElementById("passField").value;
-    auth.createUserWithUsernameAndPassword(username, password)
-    .then ((userCredential) => {
-            user = userCredential.user;
-            console.log("Successfully Register");
-        })
-        .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            console.log("error " + errorCode + " : " + errorMessage);
-        });
-    }
-/*
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore()
-    const CloudDB = db.collection("user")
+    var password = document.getElementById("passwordField").value;
 
-    async function AddDocument_CustomID(){
-        CloudDB.document("User").set({
-            Username : UsernameBox.value,
-            Password : PasswordBox.value
-        })
-        .then(() => {
-            console.log("Data saved")
-            alert("Successfully")
-        }).catch((error) => {
-            console.log(error)
-        })
-    }
-        */
+    auth.createUserWithUsernameAndPassword(username, password)
+        .then ((userCredential) => {
+                user = userCredential.user;
+                console.log("Successfully Registered with ("+ user.username +")");
+                console.log("Successfully Register");
+                console.log("UID : "+ user.uid);
+
+                firestore.collection("User").doc(usernameField.value).collection("Infomation").doc("userLogin").set({
+                    Username : usernameField.value,
+                    Password : passwordField.value,
+                    UID      : user.uid
+                })
+            })
+            .catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log("error " + errorCode + " : " + errorMessage);
+            });
+        }
