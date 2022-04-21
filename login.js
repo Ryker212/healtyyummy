@@ -1,5 +1,5 @@
     // Login //
-const firestore = firebase.firestore()
+const firestore = firebase.firestore();
 var user = auth.currentUser;
 
 let Login_Button = document.getElementById("Logbtn");

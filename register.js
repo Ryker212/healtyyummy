@@ -1,5 +1,5 @@
     // Register //
-const auth = firebase.auth();
+const auth = firebase.auth()
 var user = auth.currentUser;
 
 let Register_button = document.getElementById("Regbtn");
