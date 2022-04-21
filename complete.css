@@ -103,7 +103,6 @@ body{
 }
 
 .form a.text{
-
     text-decoration: none;
 }
 /*ลิ้งตอนเคอร์เซอร์เม้าชี้จะมีเส้นข้างล่าง*/
@@ -130,6 +129,6 @@ body{
 }
 
 .form .login-register{
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
 }
