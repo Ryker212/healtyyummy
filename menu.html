@@ -1,44 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link เชื่อมไฟล์css-->
     <link rel="stylesheet" href="stylemenu.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.7/dist/sweetalert2.all.min.js
-    "></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.7/dist/sweetalert2.all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
     <title>Menu</title>
     
 
 </head>
 <body>
 
-    <header>    
+    <header>
+    <!--Logo heathy yummy-->    
         <marquee  behavior="alternate" direction="left">          
-            <img src="logo_heathy_yummy.PNG"width="350"><br></marquee> 
-<h1 class="box">
-    <p align = "center" ><input type="text" placeholder="search..." id="search"  />
-    <button id="button" type="button">
-    <img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png"width="20"height="20"></button><br></p>
-</h1>
+            <img src="logo_heathy_yummy.PNG" alt="logo" width="300"><br></marquee> 
+<!--กล่องใส่ข้อความค้นหา-->
+<form class="box">
+    <center><input type="text" id="myinput" name="search" placeholder="search..."></center><br>
+</form>
+</header>
 
 <article class="menu">
     <br/>
     <p style="text-decoration:underline">Menu Recommend</p><br/>
+    <!--รูปเมนู-->
+    <div id="images">
+                <span class="boximg"><a href=""><img class="menuradius" src="menu1.jpg" alt="ไข่ข้นลูกชิ้นอกไก่" width=200></a></span>
+                <span class="boximg"><a href=""><img class="menuradius" src="menu2.jpg" alt="เครปไข่ขาวอกไก่" width=200></a></span>
+                <span class="boximg"><a href=""><img class="menuradius" src="menu3.jpg" alt="ไข่เจียวกิมจิ" width=200></a></span>
+                <span class="boximg"><a href=""><img class="menuradius" src="menu4.jpg" alt="กุ้งย่างกระเทียม" width=200></a></span>
+                <span class="boximg"><a href=""><img class="menuradius" src="menu5.jpg" alt="ไข่เจียวกุ้งไร้น้ำมัน" width=200></a></span>
+                <span class="boximg"><a href=""><img class="menuradius" src="menu6.jpg" alt="ขนมปังไข่คน" width=200></a></span>
+                <span class="boximg"><a href=""><img class="menuradius" src="menu7.jpg" alt="ไข่ดาวไร้น้ำมัน" width=200></a></span>
+    <!--ตรวจสอบข้อความที่ค้นหา-->           
+    <script>
+                $("#myinput").keyup(function() {
+                    var val = $.trim(this.value);
+                    var header = "logo"
+                    if (val === "") {
+                        $('img').show();
+                }
+                    else {
+                    $('img').hide();
+                    $("img[alt*=" + val +"]").show();
+                    $("img[alt*=" + header +"]").show();
+                }
+            });
+    </script>
+    </div>   
 
-    <center>
-        <span class="boximg">
-    <a href="https://women.trueid.net/detail/ywn1pK0JP4X8"><img src="https://cms.dmpcdn.com/women/2019/11/25/5bd325f0-0f56-11ea-a6e1-5d3091fbffd6_original.jpg" style="width:200px"></a>
-    <img src="https://cms.dmpcdn.com/women/2019/11/25/5c129ff0-0f56-11ea-a6e1-5d3091fbffd6_original.jpg" style="width:200px">
-    <img src="https://cms.dmpcdn.com/women/2019/11/25/5c2c1b60-0f56-11ea-8b91-1168a47bbf67_original.jpg" style="width:200px">
-    <img src="https://cms.dmpcdn.com/women/2019/11/25/5c61f870-0f56-11ea-8b91-1168a47bbf67_original.jpg" style="width:200px">
-    <img src="https://cms.dmpcdn.com/women/2019/11/25/5c775530-0f56-11ea-a6e1-5d3091fbffd6_original.jpg" style="width:200px">
-    <img src="https://cms.dmpcdn.com/women/2019/11/25/5cb52180-0f56-11ea-a6e1-5d3091fbffd6_original.jpg" style="width:200px">
-    <img src="https://cms.dmpcdn.com/women/2019/11/25/5cc3a070-0f56-11ea-8b91-1168a47bbf67_original.jpg" style="width:200px">
-</span>
-</center>
-        <br/>
     <p style="text-decoration:underline">Latest post</p><br/>
+    <!--รูปบทความ-->
   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
     <img src="https://thegirlonbloor.com/wp-content/uploads/2019/05/Clean-Eating-Meal-Prep-2-790x1285.jpg" style="width:400px">
     <img src="https://cleanfoodcrush.com/wp-content/uploads/2019/08/Back-to-School-Lunch-Ideas-CFC.jpg" style="width:400px">
@@ -52,15 +68,8 @@
     <img src="https://img.buzzfeed.com/buzzfeed-static/static/2015-04/27/11/enhanced/webdr04/original-15996-1430147825-19.jpg?downsize=600:*&output-format=auto&output-quality=auto" style="width:400px">
 
 </article>
-
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script> <!-- เพิ่ม  Library -->
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script><!-- เพิ่ม  Library -->
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script> <!-- เพิ่ม  Library -->
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script> <!-- เพิ่ม  Library -->
-
-
+<!--link เชื่อมไฟล์javascript-->
 <script src="scriptmenu.js"></script>
-
 </body>
 
 </html>
