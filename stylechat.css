@@ -60,9 +60,10 @@ body {
 }
 .msg_me{
     background-color: aquamarine;
-    width:min-content;
+    width:max-content;
     padding:10px;
     border-radius:5px 0 5px 5px;
+    max-width: 50%;
 }
 .msg_user
 {
@@ -70,5 +71,9 @@ body {
     width:min-content;
     padding:10px;
     border-radius:5px 0 5px 5px;
+}
+a{
+    margin-Left:50%;
+    align-items: right;
 }
 
