@@ -20,44 +20,10 @@ h1 {
         font-size:20px;
         font-family:  'Arial';        
 }
-form.example input[type=text] {
-        padding: 10px;
-        font-size: 17px;
-        border: 1px solid grey;
-        float: left;
-        width: 80%;
-        background: #f1f1f1;
-      }
-form.example button {
-        float: left;
-        width: 20%;
-        padding: 10px;
-        background: #2196F3;
-        color: white;
-        font-size: 17px;
-        border: 1px solid grey;
-        border-left: none;
-        cursor: pointer;
-      }
-      
-      form.example button:hover {
-        background: #0b7dda;
-      }
-      
-      form.example::after {
-        content: "";
-        clear: both;
-        display: table;
-      }
-button{
+.chat{
         color: #fff;
-        /* overflow: hidden; */
-        border-radius: 1000px;
-        width: 3%;height: 30px;
-        box-shadow: 0px -0px 0px 0px rgba(143,64,248,0.5),
-        0px 0px 0px 0px rgba(39, 200, 255,0.5);      
 }
-button:hover{
+button:hover.chat{
         transform: translate(0, -6px);
         box-shadow: 10px -15px 25px 0px rgba(143,64,248,0.5),
         -10px 10px 25px 0px rgba(39, 200, 255,0.5);  
