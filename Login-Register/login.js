@@ -21,3 +21,5 @@ function Login(){
                 console.log("error " + errorCode + " : " + errorMessage);
             });
         }
+
+window.location.replace("menu.html");
