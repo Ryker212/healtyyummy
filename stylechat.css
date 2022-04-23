@@ -57,9 +57,13 @@ body {
     padding:20px;
     overflow-x:hidden;
     overflow-y:auto;
+    
+}
+.messages{
+    background-color: #FFFF00	;
 }
 .msg_me{
-    background-color: aquamarine;
+    background-color: rgb(16, 199, 223);
     width:max-content;
     padding:10px;
     border-radius:5px 0 5px 5px;
@@ -68,12 +72,29 @@ body {
 .msg_user
 {
     background-color: aquamarine;
-    width:min-content;
+    width:max-content;
     padding:10px;
     border-radius:5px 0 5px 5px;
+    max-width: 50%;
+
 }
 a{
     margin-Left:50%;
     align-items: right;
+}.msg_megod{
+    background-color:#FFFF00;
+    width:max-content;
+    padding:10px;
+    border-radius:5px 0 5px 5px;
+    max-width: 50%;
+}
+.msg_usergod
+{
+    background-color: rgb(202, 246, 3);
+    width:max-content;
+    padding:10px;
+    border-radius:5px 0 5px 5px;
+    max-width: 50%;
+
 }
 
