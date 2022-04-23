@@ -44,6 +44,20 @@ const db = firebase.firestore()
         
         })
     }
+    
+    function like(){
+        var namer = localStorage.getItem("namer");
+        var like ="❤️"
+        if(like !=""){
+            firebase.database().ref("messages").push({
+                msg:like,
+                sender: namer
+            }).then(function(){
+                document.getElementById('msg_text').value="";
+            
+            })
+        }
+    }   
   
 
 
