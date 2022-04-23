@@ -71,7 +71,18 @@ function back()
 {
    
    firebase.database().ref("messages").remove();
-   
+   var messages ="";
+   var namer = localStorage.getItem("namer");
+   var msg ="ได้ออกไปแล้ว"
+   if(msg =="ได้ออกไปแล้ว"){
+       firebase.database().ref("messages").push({
+           msg:msg,
+           sender: namer
+       }).then(function(){
+           document.getElementById('msg_text').value="";
+       
+       })
+   }
    
   
     window.location.replace("menu.html");
