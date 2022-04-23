@@ -13,7 +13,7 @@ body {
     background-color: #9c2828;
 }
 .box_chat{
-    background-color: rgb(198, 204, 213);
+    background-color: rgb(215, 218, 222);
     width:400px;
     height: 600px;
     margin:50px auto;
@@ -63,7 +63,7 @@ body {
     background-color: #FFFF00	;
 }
 .msg_me{
-    background-color: rgb(16, 199, 223);
+    background-color: aquamarine;
     width:max-content;
     padding:10px;
     border-radius:5px 0 5px 5px;
@@ -90,11 +90,14 @@ a{
 }
 .msg_usergod
 {
-    background-color: rgb(202, 246, 3);
+    background-color: #FFFF00;
     width:max-content;
     padding:10px;
     border-radius:5px 0 5px 5px;
     max-width: 50%;
 
+}
+.usergod{
+    color: #FF0033;
 }
 
