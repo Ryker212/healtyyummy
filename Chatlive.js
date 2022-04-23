@@ -32,7 +32,7 @@ const db = firebase.firestore()
 
     console.log("error",error)
   })
-    var messages ="";
+   
     var namer = localStorage.getItem("namer");
     var msg ="อยู่ในห้องแชทแล้ว"
     if(msg =="อยู่ในห้องแชทแล้ว"){
@@ -70,8 +70,8 @@ function send()
 function back()
 {
    
-   firebase.database().ref("messages").remove();
-   var messages ="";
+   
+   
    var namer = localStorage.getItem("namer");
    var msg ="ได้ออกไปแล้ว"
    if(msg =="ได้ออกไปแล้ว"){
@@ -84,7 +84,7 @@ function back()
        })
    }
    
-  
+   firebase.database().ref("messages").remove();
     window.location.replace("menu.html");
 }
 
