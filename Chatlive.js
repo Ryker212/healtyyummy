@@ -32,6 +32,21 @@ const db = firebase.firestore()
 
     console.log("error",error)
   })
+    var messages ="";
+    var namer = localStorage.getItem("namer");
+    var msg ="อยู่ในห้องแชทแล้ว"
+    if(msg =="อยู่ในห้องแชทแล้ว"){
+        firebase.database().ref("messages").push({
+            msg:msg,
+            sender: namer
+        }).then(function(){
+            document.getElementById('msg_text').value="";
+        
+        })
+    }
+  
+
+
   
 
 
@@ -54,32 +69,38 @@ function send()
 }
 function back()
 {
-  firebase.database().ref("messages").remove();
-
+   
+   firebase.database().ref("messages").remove();
+   
+   
+  
     window.location.replace("menu.html");
 }
+
 let ref= firebase.database().ref("messages").on('child_added' , function(snapshot){
     var username = snapshot.val().sender;
     var msg =snapshot.val().msg;
     var html ="";
     let namer = localStorage.getItem("namer");
     
+    
     if (username == 'Nutrian')
     {
         
         if(username == namer){
             
-            html += "<div class='message_me' align='right'><p class='user'>" +username +"</p><p class='msg_megod'>"+msg+"</p</div>";
+            html += "<div class='message_me' align='right'><p class='usergod'>♛" +username +"</p><p class='msg_megod'>"+msg+"</p</div>";
             document.getElementById("box_messages").innerHTML += html;
             
     
         }
         else{
-            html += "<div class='message_user' align='left'><p class='user'>" +username +"</p><p class='msg_usergod'>"+msg+"</p</div>";
+            html += "<div class='message_user' align='left'><p class='usergod'>♛" +username +"</p><p class='msg_usergod'>"+msg+"</p</div>";
             document.getElementById("box_messages").innerHTML += html;
             
         }
-        
+        var div_ob =document.getElementById("box_messages");
+        div_ob.scrollTop = div_ob.scrollHeight;
     }
     else{
         if(username == namer){
@@ -92,6 +113,7 @@ let ref= firebase.database().ref("messages").on('child_added' , function(snapsho
             html += "<div class='message_user' align='left'><p class='user'>" +username +"</p><p class='msg_user'>"+msg+"</p</div>";
             document.getElementById("box_messages").innerHTML += html;
     }
-        
+    var div_ob =document.getElementById("box_messages");
+    div_ob.scrollTop = div_ob.scrollHeight;
     }
 })
