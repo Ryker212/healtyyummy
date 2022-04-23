@@ -9,8 +9,6 @@
        var email = document.getElementById("emailField").value;
        var password = document.getElementById("passwordField").value;
        /*ไว้ดึงชื่อให้แชทบ๊อกไม่รู้ได้ป่าว*/
-       var namechat = document.getElementById("usernameFieldR").value;
-       localStorage.setItem("name", namechat);
        
    
        auth.signInWithEmailAndPassword(email, password)
@@ -18,6 +16,7 @@
                    user = userCredential.user;
                    console.log("Successfully Sign In");
                    console.log("UID :"+ user.uid);
+                   localStorage.setItem("email", email);
                    Swal.fire({
                     icon: 'success',
                     title: 'login Success',
