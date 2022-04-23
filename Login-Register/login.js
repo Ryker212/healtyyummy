@@ -2,9 +2,6 @@
 /*const firestore = firebase.firestore();
    var user = auth.currentUser;*/
  
-   
-
-   
    let Login_Button = document.getElementById("Logbtn");
    Login_Button.addEventListener("click",Login);
    
@@ -26,7 +23,8 @@
                     title: 'login Success',
                     text: 'GGEZ',
                 })
-                   
+                  
+                window.location.replace("menu.html");
                })
                .catch((error) => {
                    var errorCode = error.code;
